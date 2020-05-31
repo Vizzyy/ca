@@ -1,0 +1,53 @@
+<html>
+<title id="title">CertAuth</title>
+<style>
+    input {
+        width: 50%;
+        height: 8%;
+        border: none;
+        font-size: 200%;
+        border-radius: 0;
+        -webkit-appearance: none;
+    @include border-radius(0);
+        background-color: whitesmoke;
+    }
+
+    .mainBackground {
+        background-color: darkblue;
+        color: white;
+    }
+</style>
+<body class="mainBackground">
+<div align="center">
+    <iframe border="0" height="0" id="dummyframe" name="dummyframe"
+            style="width:0; height:0; border:none" width="0"></iframe>
+    <div>
+        <br>
+        <div style="float: center;width:50%;">
+            <div style="font-size: 50px;">Create User</div>
+            <div id="lightStatus2" style="float: center; width:100%;"></div>
+            <br><br><br><br>
+            <form action="/createUser" target="dummyframe">
+                <input name="cn" value="test00001"/>
+                <input name="pw" value="pw"/>
+                <br>
+                <br><input height="70" style="width:50%;" type="submit" value="Register">
+            </form>
+            <form action="/revokeUser" target="dummyframe">
+                <input name="cn" value="test00001"/>
+                <br>
+                <br><input height="70" style="width: 50%;" type="submit" value="Revoke">
+            </form>
+            <form action="/checkRevoked">
+                <input name="cn" value="test00001"/>
+                <br>
+                <br><input height="70" style="width: 50%;" type="submit" value="CheckRevoked">
+            </form>
+        </div>
+    </div>
+
+    <br>
+</div>
+</body>
+
+</html>
